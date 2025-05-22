@@ -11,7 +11,7 @@ exports.addSchool = (req, res) => {
   if (error) return res.status(400).json({ error });
 
   insertSchool({ name, address, latitude, longitude }, (err, result) => {
-    if (err) return res.status(500).json({ error: "DB Error" });
+    if (err) return res.status(500).json({ error: "DB Error", err });
     res.status(201).json({ message: "School added successfully" });
   });
 };
