@@ -16,13 +16,20 @@ A simple Node.js & Express.js API connected to MySQL that allows users to:
 
 ---
 
+## Deployment
+
+This project is deployed on [Render](https://render.com/) and can be accessed at the following URL:
+[https://educase-intern-school-management.onrender.com](https://educase-intern-school-management.onrender.com)
+
+The database is hosted on [Railway](https://railway.app/).
+
 ## 📦 Installation
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/school-management-api.git
-   cd school-management-api
+   git clone https://github.com/JeetDas5/Educase-intern-school-management
+   cd Educase-intern-school-management
    ```
 
 2. **Install dependencies**
@@ -33,17 +40,27 @@ A simple Node.js & Express.js API connected to MySQL that allows users to:
 
 3. **Configure database**
 
-   Create a MySQL database and a table using:
+Update the `.env` file with your MySQL database credentials.
 
-   ```sql
-   CREATE TABLE schools (
-     id INT PRIMARY KEY AUTO_INCREMENT,
-     name VARCHAR(255),
-     address VARCHAR(255),
-     latitude FLOAT,
-     longitude FLOAT
-   );
-   ```
+```bash
+    DB_HOST
+    DB_USER
+    DB_PASSWORD
+    DB_NAME
+    DB_PORT
+```
+
+Create a MySQL database and a table using:
+
+```sql
+CREATE TABLE schools (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255),
+  address VARCHAR(255),
+  latitude FLOAT,
+  longitude FLOAT
+);
+```
 
 4. **Create a `.env` file**
 
@@ -52,6 +69,7 @@ A simple Node.js & Express.js API connected to MySQL that allows users to:
    DB_USER=root
    DB_PASSWORD=your_password
    DB_NAME=your_database
+   DB_PORT=3306
    ```
 
 5. **Start the server**
