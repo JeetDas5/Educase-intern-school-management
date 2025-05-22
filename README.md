@@ -83,6 +83,20 @@ CREATE TABLE schools (
 
 ---
 
+## Database Schema
+
+Table: `schools`
+
+| Column    | Type         | Description                        |
+| --------- | ------------ | ---------------------------------- |
+| id        | INT          | Primary Key, Auto Increment        |
+| name      | VARCHAR(255) | Name of the school                 |
+| address   | VARCHAR(255) | Address of the school              |
+| latitude  | FLOAT        | Latitude coordinate of the school  |
+| longitude | FLOAT        | Longitude coordinate of the school |
+| distance  | FLOAT        | Distance from user's location      |
+|           |              |                                    |
+
 ## 📘 API Endpoints
 
 ### ✅ Health Check
